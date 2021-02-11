@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -103,7 +96,7 @@ function buildCharts(sample) {
         orientation: "h",
         opacity: 0.8,
         marker: {
-          color: "salmon"
+          color: "LightSeaGreen"
         }
       }
     ];
@@ -138,11 +131,13 @@ function buildCharts(sample) {
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
     //DELIVERABLE 3
+
+
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
       {
         value: washFreq,
-        title: {text: "Belly Button Washing Frequency<br>Scrubs per Week"},
+        title: {text: "Belly Button Washing Frequency<br>Scrubs per Week",font: { size: 16 }},
         type: "indicator",
         mode: "gauge+number", 
         gauge: {
@@ -152,11 +147,11 @@ function buildCharts(sample) {
           borderwidth: 2,
           bordercolor: "grey",
           steps: [
-            { range: [0, 2], color: "coral" },
-            { range: [2, 4], color: "lightsalmon" },
-            { range: [4, 6], color: "mistyrose" },
-            { range: [6, 8], color: "wheat" },
-            { range: [8, 10], color: "sandybrown" },
+            { range: [0, 2], color: "lavender" },
+            { range: [2, 4], color: "thistle" },
+            { range: [4, 6], color: "plum" },
+            { range: [6, 8], color: "orchid" },
+            { range: [8, 10], color: "violet" }
           ]
         }
       }
@@ -164,7 +159,7 @@ function buildCharts(sample) {
 
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = {
-      width: 600, 
+      width: 450, 
       height: 450, 
       margin: { t: 0, b: 0 }
     };
